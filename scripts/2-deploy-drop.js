@@ -1,5 +1,5 @@
 import { AddressZero } from "@ethersproject/constants";
-import sdk from "./1-initialize-sdk";
+import sdk from "./1-initialize-sdk.js";
 import { readFileSync } from "fs";
 
 (async () => {
@@ -7,7 +7,7 @@ import { readFileSync } from "fs";
         const editionDropAddress = await sdk.deployer.deployEditionDrop({
             name: "twoDAO Membership",
             description: "An experimental DAO for a particular kind of fund",
-            image: readFileSync("scripts/assets/naruto.png"),
+            image: readFileSync("scripts/assets/bcnft.png"),
             primary_sale_recipient: AddressZero,
         });
 
